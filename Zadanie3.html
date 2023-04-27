@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<script>
+function changeButtonState() {
+    var btn = document.getElementById('login');
+    if (scales.checked) {
+        btn.style = "display: visible";
+    }else{
+        btn.style = "display: none";
+    }
+}
+
+</script>
+<body>
+<input type="checkbox" id="scales" name="scales" onChange="changeButtonState()">
+<label for="scales">Показать поле ввода</label>
+<div><input id="login" required></div>
+</body>
+
+</html>

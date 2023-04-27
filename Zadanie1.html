@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<script>
+    c = 0;
+    function fn()
+    {
+
+        t = document.getElementById('but');
+        if(c==0)
+        {
+            par = "30%"
+            t.value="Уменьшить"; c=1;
+        }else
+        {
+            par = "10%"
+            t.value="Увеличить"; c=0;
+        }
+        elem = document.getElementsByClassName('r')
+        for (var i = 0; i < elem.length; i++)
+        {
+            elem[i].style.width = par
+        }
+
+    }
+
+</script>
+<body>
+
+<h3 class="r">Задание №1</h3>
+<img class="r" src="07.gif" id="pic">
+<input type="button" value="Увеличить" id="but" onclick="fn()">
+</body>
+</html>

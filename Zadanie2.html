@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    c = 0;
+    function fn()
+    {
+
+        t = document.getElementById('but');
+
+        if(c==0)
+        {
+            par = "text-decoration: underline"
+            im = "width:50px; visibility: visible;"
+            c=1;
+        }else
+        {
+            par = "text-decoration: none"
+            im = "width:50px; visibility: hidden;"
+            c=0;
+        }
+        elem = document.getElementsByClassName('r')
+        for (var i = 0; i < elem.length; i++)
+        {
+            elem[i].style = par
+
+        }
+        elemim = document.getElementsByClassName('i')
+        for (var i = 0; i < elemim.length; i++)
+        {
+            elemim[i].style = im
+
+        }
+
+    }
+</script>
+<body>
+<img class="i" style="width:50px; visibility: hidden;" src="coffee.gif" id="pic1">
+<h2 class="r">Задание №2</h2>
+<img class="i" style="width:50px; visibility: hidden;" src="coffee.gif" id="pic2">
+<h2 class="r">Заголовок 1</h2>
+<img class="i" style="width:50px; visibility: hidden;" src="coffee.gif" id="pic3">
+<h2 class="r">Заголовок 2</h2>
+
+<input type="button" value="Команда" id="but" onclick="fn()">
+</body>
+</html>
